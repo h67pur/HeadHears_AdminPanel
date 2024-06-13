@@ -2,6 +2,7 @@ import { createApp} from "vue";
 import App from './admin/App.vue';
 import Tres from '@tresjs/core'
 import "primeicons/primeicons.css";
+import '../css/app.css';
 import Aura from '@primevue/themes/aura';
 import PrimeVue from 'primevue/config';
 import russian from './ru.json';
