@@ -63,7 +63,7 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
-            'table'=>'base_users',
+            'table'=>'admin_users',
         ],
 
         // 'users' => [

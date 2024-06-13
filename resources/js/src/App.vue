@@ -1,6 +1,6 @@
 <script>
 import axios from "axios";
-import Login from "./components/Login.vue";
+import Login from "./pages/Login.vue";
 import UserPage from "./components/UserPage.vue";
 export default {
   components: {UserPage, Login},
@@ -49,8 +49,7 @@ export default {
       </div>
     </template>
     <template v-else>
-      <Login v-if="!isAuthenticated"/>
-      <UserPage v-else/>
+      <UserPage />
     </template>
 </template>
 

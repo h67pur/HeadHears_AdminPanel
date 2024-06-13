@@ -19,7 +19,7 @@ const navbarItems = ref([
     type: 'item',
     name: 'Товары',
     icon: 'pi pi-box',
-    href: '/items'
+    href: '/products'
   }
 ]);
 const sideBarWidth = ref("w-64");
