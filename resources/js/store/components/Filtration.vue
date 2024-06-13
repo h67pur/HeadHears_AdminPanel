@@ -98,7 +98,7 @@ export default {
 </template>
 
 <style>
-#admin > div > div.flex.flex-row.justify-center.gap-6 > div.bg-white.h-full.p-4.rounded-lg.shadow-md.border > div:nth-child(3) > div.p-slider.p-component.p-slider-horizontal.w-full > span.p-slider-range {
+#app > div > div.flex.flex-row.justify-center.gap-6 > div.bg-white.h-full.p-4.rounded-lg.shadow-md.border > div:nth-child(3) > div.p-slider.p-component.p-slider-horizontal.w-full > span.p-slider-range {
   background-color: #2da933 !important; /* Замените на нужный вам цвет */
 }
 </style>

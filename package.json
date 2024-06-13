@@ -30,7 +30,9 @@
         "vee-validate": "^4.12.4",
         "vue": "^3.4.11",
         "vue-apexcharts": "^1.6.2",
+        "vue-carousel": "^0.18.0",
         "vue-router": "^4.2.5",
+        "vue-yandex-maps": "^2.1.2",
         "vuex": "^4.1.0"
     }
 }

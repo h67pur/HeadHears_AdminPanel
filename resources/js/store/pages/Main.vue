@@ -36,9 +36,11 @@ import Categories from "../components/main/Categories.vue";
     <div class="absolute inset-0 flex items-center justify-center">
       <h2 class="text-white text-4xl">Marshall Major IV</h2>
     </div>
+    <router-link to="/catalog/marshall">
     <div class="absolute inset-x-0 bottom-24 flex items-center justify-center">
       <Button label="Ознакомиться" class="bg-[#3DA35D] hover:bg-[#308049] outline-none border-0 px-6" />
     </div>
+    </router-link>
   </div>
 
 

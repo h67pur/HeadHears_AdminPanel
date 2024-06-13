@@ -3,6 +3,7 @@ import Contacts from "../pages/Contacts.vue";
 import Headphones from "../pages/Catalog/Headphones.vue";
 import Choice from "../pages/topics/Choice.vue";
 import Marshall from "../pages/Catalog/Headphones/Marshall.vue";
+import Cart from "../components/Cart.vue";
 
 const routes = [
     {
@@ -49,6 +50,15 @@ const routes = [
         meta: {
             auth: true,
             title: 'Наушники'
+        }
+    },
+
+    {
+        path:'/cart',
+        component: Cart,
+        meta: {
+            auth: true,
+            title: 'Корзина'
         }
     },
 
