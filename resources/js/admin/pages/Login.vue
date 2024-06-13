@@ -43,8 +43,8 @@ function login() {
   </div>
 
   <div class="flex flex-col brand-text absolute left-6 top-6">
-    <span class="text-2xl font-bold font-sans italic">HEADHEARS</span>
-    <span class="text-xl font-bold font-sans text-white">Панель администратора</span>
+    <span class="text-2xl font-bold font-sans text-white italic">HEADHEARS</span>
+    <span class="text-lg font-bold font-sans text-white">Панель администратора</span>
   </div>
 
 
@@ -102,7 +102,7 @@ function login() {
 
 </template>
 
-<style scoped>
+<style >
 
 #password .p-password-input {
   width: 375px;
@@ -115,7 +115,7 @@ function login() {
 
 </style>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 //Шрифт
 
@@ -126,7 +126,7 @@ function login() {
 }
 
 /* Анимированный фон */
-$bg-url: "/public/img/login/background-cell-pink.png";
+$bg-url: "/img/login/background-cell-pink.png";
 $bg-width: 50px;
 $bg-height: 50px;
 

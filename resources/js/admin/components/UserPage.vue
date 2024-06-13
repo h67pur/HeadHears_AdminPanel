@@ -11,16 +11,22 @@ const screenWidth = window.innerWidth;
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
   />
+
   <div class="h-full min-h-screen flex">
+
     <div class="header-area z-50" v-if="route.name !== 'admin.login'">
       <SideBar />
     </div>
-    <div class="content-area w-full dark:border-black bg-gradient-to-r from-teal-200 to-lime-200 p-8">
+
+    <div class="content-area w-full">
+
       <div :class="screenWidth < 768 ? 'ml-16':''">
         <router-view>
         </router-view>
       </div>
+
     </div>
+
   </div>
 </template>
 

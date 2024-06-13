@@ -37,6 +37,7 @@ export default {
 
 </script>
 <template>
+
     <template v-if="isLoading">
       <div class="fixed inset-1/2 start-1/2">
         <div role="status" class="m-auto">
@@ -48,9 +49,11 @@ export default {
         </div>
       </div>
     </template>
+
     <template v-else>
       <UserPage />
     </template>
+
 </template>
 
 <style scoped>
