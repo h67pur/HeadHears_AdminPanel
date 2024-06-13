@@ -1,6 +1,5 @@
 import { createApp} from "vue";
 import App from './admin/App.vue';
-import '../css/app.css';
 import Tres from '@tresjs/core'
 import "primeicons/primeicons.css";
 import Aura from '@primevue/themes/aura';
@@ -17,8 +16,7 @@ admin.use(PrimeVue, {
     theme: {
         preset: Aura
     }
-}
-);
+});
 admin.use(Tres);
 admin.directive('tooltip', Tooltip);
 
