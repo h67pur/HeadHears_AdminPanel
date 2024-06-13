@@ -9,7 +9,7 @@ defineProps({
   spanColor: String,
   itemHref: {
     type: String,
-    default: '#',
+    default: '',
   },
 })
 </script>

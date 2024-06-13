@@ -34,7 +34,7 @@ const visibleCreateCategory = ref(false);
             transition-transform duration-300 hover:translate-x-[-10px] hover:translate-y-[-10px]">
               <div class="flex flex-col items-center text-center">
                 <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Количество категорий</h3>
-                <h4 class="my-2 ml-3 text-5xl font-bold text-gray-800">22</h4>
+                <h4 class="my-2 ml-3 text-5xl font-bold text-gray-800">28</h4>
               </div>
             </div>
           </div>
@@ -46,8 +46,8 @@ const visibleCreateCategory = ref(false);
             <div class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg cursor-pointer
             transition-transform duration-300 hover:translate-x-[-10px] hover:translate-y-[-10px]">
               <div class="flex flex-col items-center text-center">
-                <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Скоро закончатся</h3>
-                <h4 class="my-2 ml-3 text-5xl font-bold text-gray-800">22</h4>
+                <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Количество брендов</h3>
+                <h4 class="my-2 ml-3 text-5xl font-bold text-gray-800">42</h4>
               </div>
             </div>
           </div>
@@ -59,8 +59,8 @@ const visibleCreateCategory = ref(false);
             <div class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg cursor-pointer
             transition-transform duration-300 hover:translate-x-[-10px] hover:translate-y-[-10px]">
               <div class="flex flex-col items-center text-center">
-                <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Количество категорий</h3>
-                <h4 class="my-2 ml-3 text-5xl font-bold text-gray-800">22</h4>
+                <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Остатки</h3>
+                <h4 class="my-2 ml-3 text-5xl font-bold text-gray-800">8</h4>
               </div>
             </div>
           </div>

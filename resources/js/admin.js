@@ -22,18 +22,24 @@ const router = new createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/admin/',
             component: ()=>import('./admin/pages/Home.vue'),
             name: 'admin.home',
         },
         {
-            path: '/login',
+            path: '/admin/login',
             component: () => import('./admin/pages/Login.vue'),
             name: 'admin.login',
         },
         {
-            path: '/products',
+            path: '/admin/products',
             component: () => import('./admin/pages/Products.vue'),
+
+        }
+        ,
+        {
+            path: '/admin/statistics',
+            component: () => import('./admin/pages/Statistics.vue'),
 
         }
     ]
@@ -44,7 +50,7 @@ router.beforeEach((to, from, next) => {
         return next();
     }
 
-    axios.post('/auth')
+    axios.post('/admin/auth')
         .then(response => {
             if (!response.data.auth) {
                 return next({ name: 'user.login' });

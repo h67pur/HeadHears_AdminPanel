@@ -10,6 +10,6 @@ class LogoutController extends Controller
     function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/admin');
     }
 }

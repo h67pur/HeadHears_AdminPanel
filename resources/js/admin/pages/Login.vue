@@ -9,13 +9,13 @@ const nickname = ref('');
 const password = ref("");
 const error = ref(false);
 function login() {
-  axios.post('/login', {
+  axios.post('/admin/login', {
     nickname: nickname.value,
     password: password.value,
   })
       .then(response => {
         if (response.data['auth'] === true) {
-          window.location = "/";
+          window.location = "/admin/";
         } else {
           error.value = true;
         }
@@ -55,10 +55,10 @@ function login() {
     </div>
   </div>
 
-  <div class="flex items-center justify-center h-screen">
+  <div class="flex items-center justify-center">
     <div class="">
 
-      <Card style="width: 28rem; padding: 40px 30px 35px; overflow: hidden" class="form shadow-none">
+      <Card style="width: 28rem; padding: 40px 30px 35px; overflow: hidden" class="form shadow-none mt-52">
         <template #header>
 
         </template>

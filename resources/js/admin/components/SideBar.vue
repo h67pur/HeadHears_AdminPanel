@@ -13,43 +13,43 @@ const navbarItems = ref([
     type: 'item',
     name: 'Главная',
     icon: 'pi pi-home',
-    href: '/'
+    href: '/admin/'
   },
   {
     type: 'item',
     name: 'Товары',
     icon: 'pi pi-box',
-    href: '/products'
+    href: '/admin/products/'
   },
   {
     type: 'item',
     name: 'Заказы',
     icon: 'pi pi-truck',
-    href: '/users'
+    href: '/admin/orders/'
   },
   {
     type: 'item',
     name: 'Статистика',
     icon: 'pi pi-chart-bar',
-    href: '/users'
+    href: '/admin/statistics/'
   },
   {
     type: 'item',
     name: 'Скидки',
     icon: 'pi pi-tags',
-    href: '/sales'
+    href: '/admin/sales/'
   },
   {
     type: 'item',
     name: 'Пользователи',
     icon: 'pi pi-users',
-    href: '/users'
+    href: '/admin/users/'
   },
   {
     type: 'item',
     name: 'Отзывы',
     icon: 'pi pi-star',
-    href: '/users'
+    href: '/admin/reviews/'
   },
   {
     type: 'subItem',
@@ -57,21 +57,21 @@ const navbarItems = ref([
   },
   {
     type: 'item',
-    name: 'Виджеты',
-    icon: 'pi pi-desktop',
-    href: '/users'
+    name: 'Конструктор',
+    icon: 'pi pi-hammer',
+    href: '/admin/construct/'
   },
   {
     type: 'item',
-    name: 'Конструктор',
-    icon: 'pi pi-pencil',
-    href: '/users'
+    name: 'Виджеты',
+    icon: 'pi pi-desktop',
+    href: '/admin/widgets/'
   },
   {
     type: 'item',
     name: 'Статьи',
     icon: 'pi pi-pencil',
-    href: '/users'
+    href: '/admin/articles/'
   },
 ]);
 const sideBarWidth = ref("w-64");
@@ -107,7 +107,9 @@ function titleSidebarSwap(sidebarCollapsed){
     titleNavbar.value='HEADHEARS';
   }
 }
-
+function logout(){
+  window.location.href = '/admin/logout';
+}
 </script>
 
 <template>
@@ -139,6 +141,11 @@ function titleSidebarSwap(sidebarCollapsed){
           <SidebarSubItem v-if="item.type==='subItem' && !sidebarCollapsed" :title="item.name" class="pt-3"/>
           <SidebarItem v-else-if="item.type==='item'" :title="item.name" :itemIcon="item.icon" :itemHref="item.href"
                        v-tooltip="sidebarCollapsed? item.name : ''"/>
+        </li>
+        <li>
+        <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700">
+        <SidebarSubItem v-if="!sidebarCollapsed" title="Пользователь" class="pt-3"/>
+        <SidebarItem @click="logout" title="Выход" itemIcon="pi pi-sign-out" v-tooltip="sidebarCollapsed? 'Выход' : ''"/>
         </li>
       </ul>
     </div>
