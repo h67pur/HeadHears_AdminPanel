@@ -15,7 +15,13 @@ createApp(App)
 admin.use(PrimeVue, {
     locale: russian,
     theme: {
-        preset: Aura
+        preset: Aura,
+        options: {
+    cssLayer: {
+        name: 'primevue',
+        order: 'tailwind-base, primevue, tailwind-utilities'
+    }
+}
     }
 });
 admin.use(Tres);
