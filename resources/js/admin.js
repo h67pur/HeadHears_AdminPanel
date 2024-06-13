@@ -1,6 +1,5 @@
 import { createApp} from "vue";
 import App from './admin/App.vue';
-import '../css/app.css';
 import Tres from '@tresjs/core'
 import "primeicons/primeicons.css";
 import 'primevue/resources/themes/aura-light-blue/theme.css'
