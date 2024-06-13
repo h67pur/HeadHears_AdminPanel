@@ -63,13 +63,13 @@ const navbarItems = ref([
   },
   {
     type: 'item',
-    name: 'Статьи',
+    name: 'Конструктор',
     icon: 'pi pi-pencil',
     href: '/users'
   },
   {
     type: 'item',
-    name: 'Конструктор',
+    name: 'Статьи',
     icon: 'pi pi-pencil',
     href: '/users'
   },

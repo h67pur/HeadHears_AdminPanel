@@ -11,7 +11,8 @@ export default defineConfig({
             ...templateCompilerOptions
         }),
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/store.js',
+                'resources/js/admin.js'],
             refresh: true,
         }),
         Components({
