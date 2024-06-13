@@ -1,5 +1,5 @@
 import { createApp} from "vue";
-import App from './src/App.vue';
+import App from './admin/App.vue';
 import '../css/app.css';
 import Tres from '@tresjs/core'
 import "primeicons/primeicons.css";
@@ -10,30 +10,30 @@ import Tooltip from 'primevue/tooltip';
 import {createRouter, createWebHistory} from "vue-router";
 import axios from "axios";
 
-const app = createApp(App);
+const admin = createApp(App);
 createApp(App)
-app.use(PrimeVue,{
+admin.use(PrimeVue,{
     locale: russian
 });
-app.use(Tres);
-app.directive('tooltip', Tooltip);
+admin.use(Tres);
+admin.directive('tooltip', Tooltip);
 
 const router = new createRouter({
     history: createWebHistory(),
     routes: [
         {
             path: '/',
-            component: ()=>import('./src/pages/Home.vue'),
+            component: ()=>import('./admin/pages/Home.vue'),
             name: 'admin.home',
         },
         {
             path: '/login',
-            component: () => import('./src/pages/Login.vue'),
+            component: () => import('./admin/pages/Login.vue'),
             name: 'admin.login',
         },
         {
             path: '/products',
-            component: () => import('./src/pages/Products.vue'),
+            component: () => import('./admin/pages/Products.vue'),
 
         }
     ]
@@ -55,5 +55,5 @@ router.beforeEach((to, from, next) => {
             next({ name: 'user.login' });
         });
 });
-app.use(router);
-app.mount("#app");
+admin.use(router);
+admin.mount("#admin");

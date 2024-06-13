@@ -17,6 +17,6 @@ class AdminController extends Controller
 
     function enter(): Factory|Application|View
     {
-        return view('app');
+        return view('admin');
     }
 }
