@@ -38,7 +38,9 @@ const hello = ref('Тут будет дополнительный текст к�
   <div class="container relative flex flex-col justify-between h-full p-4 mx-auto">
     <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Статистика</h2>
     <p class="mb-4 text-lg text-gray-500">Статистика за 21.05.2024 - 21.06.2024.</p>
+
     <div class="w-full">
+
       <div class="flex flex-col w-full mb-8 sm:flex-row">
 
         <div class="w-full mb-10 sm:mb-0 sm:w-1/2">

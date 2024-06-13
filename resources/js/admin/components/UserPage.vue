@@ -17,13 +17,7 @@ const screenWidth = window.innerWidth;
     </div>
     <div class="content-area w-full dark:border-black bg-gradient-to-r from-teal-200 to-lime-200 p-8">
       <div :class="screenWidth < 768 ? 'ml-16':''">
-        <router-view v-slot="{ Component }">
-          <transition
-              enter-active-class="animated fadeIn zoomIn"
-              leave-active-class="animated fadeOut zoomOut"
-          >
-            <component :is="Component" />
-          </transition>
+        <router-view>
         </router-view>
       </div>
     </div>

@@ -7,7 +7,7 @@ import InputIcon from 'primevue/inputicon';
 
 const nickname = ref('');
 const password = ref("");
-
+const error = ref(false);
 function login() {
   axios.post('/login', {
     nickname: nickname.value,
@@ -17,7 +17,7 @@ function login() {
         if (response.data['auth'] === true) {
           window.location = "/";
         } else {
-          console.log(227)
+          error.value = true;
         }
       })
 }
@@ -72,7 +72,8 @@ function login() {
             <label for="username" class="text-sm">Имя пользователя</label>
             <IconField iconPosition="left">
               <InputIcon class="pi pi-user"> </InputIcon>
-              <InputText class="h-9 w-full"  v-model="nickname" placeholder="heevock" />
+              <InputText class="h-9 w-full"  v-model="nickname" placeholder="heevock"
+                         @input="error=false" :invalid="error"/>
             </IconField>
           </div>
 
@@ -81,9 +82,10 @@ function login() {
 
             <IconField iconPosition="left">
               <InputIcon class="pi pi-lock"> </InputIcon>
-              <InputText class="h-9 w-full" v-model="password" type="password" toggleMask />
+              <InputText class="h-9 w-full" v-model="password" type="password" toggleMask
+                         @input="error=false" :invalid="error"/>
             </IconField>
-
+            <Badge v-if="error" severity="danger">Неверные данные. Попробуйте снова!</Badge>
           </div>
 
         </template>

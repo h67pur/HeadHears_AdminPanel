@@ -20,7 +20,59 @@ const navbarItems = ref([
     name: 'Товары',
     icon: 'pi pi-box',
     href: '/products'
-  }
+  },
+  {
+    type: 'item',
+    name: 'Заказы',
+    icon: 'pi pi-truck',
+    href: '/users'
+  },
+  {
+    type: 'item',
+    name: 'Статистика',
+    icon: 'pi pi-chart-bar',
+    href: '/users'
+  },
+  {
+    type: 'item',
+    name: 'Скидки',
+    icon: 'pi pi-tags',
+    href: '/sales'
+  },
+  {
+    type: 'item',
+    name: 'Пользователи',
+    icon: 'pi pi-users',
+    href: '/users'
+  },
+  {
+    type: 'item',
+    name: 'Отзывы',
+    icon: 'pi pi-star',
+    href: '/users'
+  },
+  {
+    type: 'subItem',
+    name: 'Интерфейс'
+  },
+  {
+    type: 'item',
+    name: 'Виджеты',
+    icon: 'pi pi-desktop',
+    href: '/users'
+  },
+  {
+    type: 'item',
+    name: 'Статьи',
+    icon: 'pi pi-pencil',
+    href: '/users'
+  },
+  {
+    type: 'item',
+    name: 'Конструктор',
+    icon: 'pi pi-pencil',
+    href: '/users'
+  },
 ]);
 const sideBarWidth = ref("w-64");
 const sidebarCollapsed = ref(false);

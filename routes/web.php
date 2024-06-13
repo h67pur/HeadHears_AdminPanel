@@ -22,11 +22,8 @@ Route::domain('admin.'.env('APP_URL'))->group(function () {
         ->name('login');
     Route::get('/register', [RegisterController::class,'register'])
         ->name('register');
-
     Route::post('/auth', [AuthCheckController::class,'authCheck']);
-
     Route::get('/logout', [LogoutController::class,'logout']);
-
 });
 
 Route::domain(env('APP_URL'))->group(function () {
