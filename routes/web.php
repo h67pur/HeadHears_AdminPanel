@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthControllers\LoginController;
 use App\Http\Controllers\AuthControllers\RegisterController;
 
-Route::domain(env('APP_URL').'.admin')->group(function () {
+Route::domain('admin.'.env('APP_URL'))->group(function () {
 
     Route::get('/login', [AdminController::class, 'enter']);
 
