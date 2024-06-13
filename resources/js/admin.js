@@ -3,7 +3,7 @@ import App from './admin/App.vue';
 import '../css/app.css';
 import Tres from '@tresjs/core'
 import "primeicons/primeicons.css";
-import 'primevue/resources/themes/aura-light-blue/theme.css';
+import Aura from '@primevue/themes/aura';
 import PrimeVue from 'primevue/config';
 import russian from './ru.json';
 import Tooltip from 'primevue/tooltip';
@@ -13,7 +13,11 @@ import axios from "axios";
 const admin = createApp(App);
 createApp(App)
 admin.use(PrimeVue, {
-    locale: russian,}
+    locale: russian,
+    theme: {
+        preset: Aura
+    }
+}
 );
 admin.use(Tres);
 admin.directive('tooltip', Tooltip);
