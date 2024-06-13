@@ -12,7 +12,7 @@ export default defineConfig({
         }),
         laravel({
             input: ['resources/css/app.css', 'resources/js/store.js',
-                'resources/js/admin.js', '@primevue/themes/aura'],
+                'resources/js/admin.js'],
             refresh: true,
         }),
         Components({
