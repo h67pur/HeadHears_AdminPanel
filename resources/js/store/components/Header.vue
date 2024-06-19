@@ -316,13 +316,13 @@ const splitNumber = (number) => {
       <div class="content-center">
         <Button icon="pi pi-user" class="bg-[#3DA35D] hover:bg-[#308049] border-0 mx-1" @click="visibleRight = true" />
 
-        <Sidebar v-model:visible="visibleRight" header="Профиль" position="right" class="w-[18rem] h-[20rem] border-4 border-r-0 border-green-500 mb-[30%]">
+        <Sidebar v-model:visible="visibleRight" header="Профиль" position="right" class="w-[18rem] h-[21.4rem] border-4 border-r-0 border-green-500 mb-[30%]">
 
           <template #header>
             <div class="flex align-items-center items-center gap-2">
 <!--              <Avatar image="./headphone.png" shape="circle" />-->
               <img src="./headphone.png" class="w-10">
-              <span class="font-bold">Соболев Даниил</span>
+              <span class="font-bold">Пользователь 1</span>
             </div>
           </template>
 
@@ -335,7 +335,7 @@ const splitNumber = (number) => {
         <Button icon="pi pi-shopping-cart" class="bg-[#3DA35D] hover:bg-[#308049] border-0 mx-1" @click="visibleCart = true" />
 
         <Sidebar v-model:visible="visibleCart" header="Корзина" position="right" class="w-[21.5rem] sidebar border-l-4 border-t-0 border-b-0 border-r-0 border-green-400">
-          <div class="bg-green-700 text-white p-4 rounded-lg shadow-md content overflow-hidden" style="width: 19rem; height: 100%;">
+          <div class="bg-green-700 text-white p-4 rounded-lg shadow-md content overflow-hidden" style="width: 18.7rem; height: 100%;">
             <div class="flex justify-between items-center mb-4">
               <button class="text-white hover:text-gray-300" @click="store.clearCart">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -462,7 +462,7 @@ $skew-angle: -10deg;
   &:before {
     content: "";
     position: absolute;
-    top: 85px;
+    top: 87px;
     height: 2.8%;
     background-color: #000000; // Цвет черного прямоугольника
     animation: slide-right ($animation-duration) ease-in-out infinite;

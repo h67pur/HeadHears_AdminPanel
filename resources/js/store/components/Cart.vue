@@ -8,7 +8,7 @@
     <div v-else class="cart-items-container flex gap-5 w-full">
 
       <div class="flex flex-col">
-        <div v-for="item in store.cartItems" :key="item.id" class="h-[18rem] w-[40rem] cart-item bg-white rounded-lg shadow-lg border overflow-hidden flex flex-col p-4 mb-4">
+        <div v-for="item in store.cartItems" :key="item.id" class="min-h-[18rem] w-[40rem] cart-item bg-white rounded-lg shadow-lg border overflow-hidden flex flex-col p-4 mb-4">
           <div class="flex items-center justify-between w-full p-[1rem] px-[3rem]">
             <div class="w-[9rem] h-full">
               <img :src="item.image" :alt="item.name" class="w-[9rem] h-[9rem] mr-4" />
