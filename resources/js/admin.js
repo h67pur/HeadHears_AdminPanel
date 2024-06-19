@@ -1,8 +1,8 @@
 import { createApp} from "vue";
 import App from './admin/App.vue';
+import '../css/app.css';
 import Tres from '@tresjs/core'
 import "primeicons/primeicons.css";
-import '../css/app.css';
 import Aura from '@primevue/themes/aura';
 import PrimeVue from 'primevue/config';
 import russian from './ru.json';
@@ -12,18 +12,18 @@ import axios from "axios";
 
 const admin = createApp(App);
 createApp(App)
-admin.use(PrimeVue, {
-    locale: russian,
+admin.use(PrimeVue,{
     theme: {
         preset: Aura,
         options: {
-    cssLayer: {
-        name: 'primevue',
-        order: 'tailwind-base, primevue, tailwind-utilities'
-    }
-}
-    }
-});
+            prefix: 'p',
+            darkModeSelector: '.my-dark-mode',
+            cssLayer: {
+                name: 'primevue',
+                order: 'tailwind-base, primevue, tailwind-utilities'
+            }
+        }
+    }});
 admin.use(Tres);
 admin.directive('tooltip', Tooltip);
 
