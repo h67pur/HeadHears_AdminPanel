@@ -18,7 +18,7 @@ const screenWidth = window.innerWidth;
       <SideBar />
     </div>
 
-    <div class="content-area w-full">
+    <div class="content-area w-full dark:border-black bg-gradient-to-r from-teal-200 to-lime-200 p-8">
 
       <div :class="screenWidth < 768 ? 'ml-16':''">
         <router-view>
