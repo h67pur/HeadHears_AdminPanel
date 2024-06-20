@@ -15,7 +15,7 @@ Route::group(['prefix' => '/admin'],function () {
     Route::get('/products', [AdminController::class, 'enter'])
         ->middleware('auth');
     Route::post('/', [AdminController::class, 'post']);
-    Route::get('/admin/enter', function (){
+    Route::get('/enter', function (){
        \Illuminate\Support\Facades\Auth::logout();
         return redirect('/admin');
     });

@@ -8,6 +8,7 @@ import InputIcon from 'primevue/inputicon';
 const nickname = ref('');
 const password = ref("");
 const email = ref("");
+const phone = ref("");
 const nickname2 = ref('');
 const password2 = ref("");
 const dateBirth = ref('');
@@ -86,27 +87,27 @@ function login() {
           <div class="grid grid-cols-2 gap-6 py-5 ">
             <div class="flex flex-col">
               <label for="username" class="text-sm">Имя пользователя</label>
-                <InputText class="h-9 w-full"  v-model="nickname" placeholder="heevock" @input="error=false" :invalid="error"/>
+                <InputText class="h-9 w-full"  v-model="nickname2" placeholder="heevock" @input="error=false" :invalid="error"/>
             </div>
             <div class="flex flex-col">
               <label for="username" class="text-sm">Почта</label>
-              <InputText class="h-9 w-full"  v-model="nickname" placeholder="heevock@gmail.com" @input="error=false" :invalid="error"/>
+              <InputText class="h-9 w-full"  v-model="email" placeholder="heevock@gmail.com" @input="error=false" :invalid="error"/>
             </div>
             <div class="flex flex-col">
               <label for="username" class="text-sm">Телефон</label>
-              <InputText class="h-9 w-full"  v-model="nickname" placeholder="+79626544587" @input="error=false" :invalid="error"/>
+              <InputText class="h-9 w-full"  v-model="phone" placeholder="+79626544587" @input="error=false" :invalid="error"/>
             </div>
             <div class="flex flex-col">
               <label for="username" class="text-sm">Дата рождения</label>
-              <InputText class="h-9 w-full"  v-model="nickname" placeholder="11.09.2002" @input="error=false" :invalid="error"/>
+              <InputText class="h-9 w-full"  v-model="dateBirth" placeholder="11.09.2002" @input="error=false" :invalid="error"/>
             </div>
             <div class="flex flex-col col-span-2">
               <label for="username" class="text-sm">ФИО</label>
-              <InputText class="h-9 w-full"  v-model="nickname" placeholder="Иванов Игорь Александрович" @input="error=false" :invalid="error"/>
+              <InputText class="h-9 w-full"  v-model="fio" placeholder="Иванов Игорь Александрович" @input="error=false" :invalid="error"/>
             </div>
             <div class="flex flex-col col-span-2">
               <label for="username" class="text-sm">Пароль</label>
-              <InputText class="h-9 w-full" v-model="password" type="password" toggleMask
+              <InputText class="h-9 w-full" v-model="password2" type="password" toggleMask
                          @input="error=false" :invalid="error" placeholder="***********"/>
             </div>
           </div>
