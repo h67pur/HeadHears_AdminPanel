@@ -13,11 +13,13 @@ import Menubar from 'primevue/menubar';
 const visibleRight = ref(false);
 const visibleCart = ref(false);
 
-import { ref } from "vue";
+import {onMounted, ref} from "vue";
+import axios from "axios";
 
 const catalog = ref();
 const stores = ref();
 const promotions = ref();
+const sid = ref(false);
 const toggleCatalog = (event) => {
   catalog.value.toggle(event);
 }
@@ -96,15 +98,29 @@ const items = ref([
     ]
   },
 ]);
-
+const auth = ref();
 const splitNumber = (number) => {
   return number.toLocaleString('en-US')
       .replace(/,/g, ' ')  // Заменяет запятые на пробелы
       .replace(/\./g, ','); // Заменяет точки на запятые
 };
 
-
-
+onMounted(()=>{
+  axios.post('/admin/auth')
+      .then(response =>{
+        auth.value = response.data.auth;
+        console.log(response.data.auth);
+      })
+})
+function userFun()
+{
+  if (auth.value) {
+    visibleRight.value = true;
+  }
+  else {
+    window.location.href='/login'
+  }
+}
 </script>
 
 <template>
@@ -314,7 +330,7 @@ const splitNumber = (number) => {
       </div>
 
       <div class="content-center">
-        <Button icon="pi pi-user" class="bg-[#3DA35D] hover:bg-[#308049] border-0 mx-1" @click="visibleRight = true" />
+        <Button icon="pi pi-user" class="bg-[#3DA35D] hover:bg-[#308049] border-0 mx-1" @click="userFun" />
 
         <Sidebar v-model:visible="visibleRight" header="Профиль" position="right" class="w-[18rem] h-[21.4rem] border-4 border-r-0 border-green-500 mb-[30%]">
 
@@ -322,7 +338,7 @@ const splitNumber = (number) => {
             <div class="flex align-items-center items-center gap-2">
 <!--              <Avatar image="./headphone.png" shape="circle" />-->
               <img src="./headphone.png" class="w-10">
-              <span class="font-bold">Пользователь 1</span>
+              <span class="font-bold">Соболев Даниил</span>
             </div>
           </template>
 

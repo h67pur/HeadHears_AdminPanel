@@ -4,6 +4,7 @@ import Headphones from "../pages/Catalog/Headphones.vue";
 import Choice from "../pages/topics/Choice.vue";
 import Marshall from "../pages/Catalog/Headphones/Marshall.vue";
 import Cart from "../components/Cart.vue";
+import Login from "../pages/Login.vue";
 
 const routes = [
     {
@@ -61,6 +62,12 @@ const routes = [
             title: 'Корзина'
         }
     },
+
+    {
+        path: '/login',
+        component: Login,
+
+    }
 
 ];
 export default routes;

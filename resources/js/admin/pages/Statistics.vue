@@ -30,6 +30,131 @@ const animateNumbers = () => {
 }
 
 onMounted(animateNumbers)
+const audioProducts = ref([
+  {
+    id: 1,
+    name: "Наушники Sony WH-1000XM4",
+    stock: 15,
+    price: 24999,
+    status: "В наличии",
+    image: "https://example.com/sony-wh-1000xm4.jpg"
+  },
+  {
+    id: 2,
+    name: "Акустическая система JBL Flip 5",
+    stock: 8,
+    price: 6999,
+    status: "В наличии",
+    image: "https://example.com/jbl-flip-5.jpg"
+  },
+  {
+    id: 3,
+    name: "Проигрыватель виниловых дисков Audio-Technica AT-LP120XUSB",
+    stock: 4,
+    price: 29990,
+    status: "Ожидается поставка",
+    image: "https://example.com/at-lp120xusb.jpg"
+  },
+  {
+    id: 4,
+    name: "Беспроводные наушники Bose QuietComfort Earbuds",
+    stock: 12,
+    price: 19999,
+    status: "В наличии",
+    image: "https://example.com/bose-quietcomfort-earbuds.jpg"
+  },
+  {
+    id: 5,
+    name: "Портативная Bluetooth-колонка JBL Charge 5",
+    stock: 18,
+    price: 9999,
+    status: "В наличии",
+    image: "https://example.com/jbl-charge-5.jpg"
+  },
+  {
+    id: 6,
+    name: "Усилитель Yamaha A-S501",
+    stock: 6,
+    price: 39990,
+    status: "В наличии",
+    image: "https://example.com/yamaha-a-s501.jpg"
+  },
+  {
+    id: 7,
+    name: "Проигрыватель виниловых дисков Pro-Ject Debut Carbon EVO",
+    stock: 3,
+    price: 34990,
+    status: "Ожидается поставка",
+    image: "https://example.com/pro-ject-debut-carbon-evo.jpg"
+  },
+  {
+    id: 8,
+    name: "Беспроводные наушники Sennheiser Momentum 3 Wireless",
+    stock: 10,
+    price: 26999,
+    status: "В наличии",
+    image: "https://example.com/sennheiser-momentum-3-wireless.jpg"
+  },
+  {
+    id: 9,
+    name: "Портативная Bluetooth-колонка Ultimate Ears MEGABOOM 3",
+    stock: 14,
+    price: 11999,
+    status: "В наличии",
+    image: "https://example.com/ue-megaboom-3.jpg"
+  },
+  {
+    id: 10,
+    name: "Саундбар Samsung HW-Q950A",
+    stock: 7,
+    price: 79990,
+    status: "В наличии",
+    image: "https://example.com/samsung-hw-q950a.jpg"
+  },
+  {
+    id: 11,
+    name: "Наушники Apple AirPods Pro",
+    stock: 20,
+    price: 19990,
+    status: "В наличии",
+    image: "https://example.com/airpods-pro.jpg"
+  },
+  {
+    id: 12,
+    name: "Проигрыватель виниловых дисков Rega Planar 1",
+    stock: 5,
+    price: 24990,
+    status: "В наличии",
+    image: "https://example.com/rega-planar-1.jpg"
+  },
+  {
+    id: 13,
+    name: "Беспроводные наушники Sony WF-1000XM3",
+    stock: 11,
+    price: 14999,
+    status: "В наличии",
+    image: "https://example.com/sony-wf-1000xm3.jpg"
+  },
+  {
+    id: 14,
+    name: "Портативная Bluetooth-колонка JBL Clip 4",
+    stock: 17,
+    price: 3999,
+    status: "В наличии",
+    image: "https://example.com/jbl-clip-4.jpg"
+  },
+  {
+    id: 15,
+    name: "Усилитель Denon PMA-600NE",
+    stock: 9,
+    price: 29990,
+    status: "В наличии",
+    image: "https://example.com/denon-pma-600ne.jpg"
+  }
+]);
+function formatPrice(value) {
+  return new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(value);
+}
 
 const hello = ref('Тут будет дополнительный текст который отображает краткую информацию по данному параметру')
 </script>
@@ -141,32 +266,6 @@ const hello = ref('Тут будет дополнительный текст к�
       <div class="flex flex-col w-full mb-5">
 
         <div class="w-full mb-10">
-          <div class="relative h-full ml-0 mr-0 sm:mr-10">
-            <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
-            <div class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg cursor-pointer
-            transition-transform duration-300 hover:translate-x-[-10px] hover:translate-y-[-10px]">
-              <div class="flex items-center -mt-1">
-                <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Список товаров</h3>
-              </div>
-              <div>
-                <div class="card p-4">
-                  <DataTable>
-                    <Column header="Название товара" />
-                    <Column header="Категория" />
-                    <Column header="Цена" />
-                    <Column header="Количество на складе" />
-                    <Column header="" />
-                    <Column header="Название" />
-                    <Column header="Название" />
-                    <Column header="Название" />
-                  </DataTable>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-full">
           <div class="relative h-full ml-0 mr-10">
             <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
             <div class="relative h-full p-5 bg-white border-2 border-green-400 rounded-lg cursor-pointer
@@ -178,6 +277,38 @@ const hello = ref('Тут будет дополнительный текст к�
             </div>
           </div>
         </div>
+
+        <div class="w-full ">
+          <div class="relative h-full ml-0 mr-0 sm:mr-10">
+            <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
+            <div class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg">
+              <div class="flex items-center -mt-1">
+                <h3 class="my-2 ml-3 text-xl font-bold text-gray-800">Список товаров</h3>
+              </div>
+              <div>
+                <div class="card p-4">
+                  <DataTable :value="audioProducts" responsiveLayout="stack" paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]">
+                    <Column field="id" header="Номер" />
+                    <Column field="name" header="Название товара" />
+                    <Column field="stock" header="Количество на складе" />
+                    <Column field="price" header="Текущая цена">
+                      <template #body="slotProps">
+                        {{ formatPrice(slotProps.data.price) }}
+                      </template>
+                    </Column>
+                    <Column field="status" header="Статус" />
+                    <Column header="Фото">
+                      <template #body="slotProps">
+                        <Button icon="pi pi-eye" link />
+                      </template>
+                    </Column>
+                  </DataTable>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </div>

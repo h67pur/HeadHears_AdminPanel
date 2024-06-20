@@ -3,12 +3,12 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthControllers\AuthCheckController;
 use App\Http\Controllers\AuthControllers\LogoutController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthControllers\LoginController;
 use App\Http\Controllers\AuthControllers\RegisterController;
 
 Route::group(['prefix' => '/admin'],function () {
-
     Route::get('/login', [AdminController::class, 'enter']);
 
     Route::get('/', [AdminController::class,'enter'])

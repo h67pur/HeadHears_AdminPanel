@@ -82,7 +82,7 @@ function login() {
 
             <IconField iconPosition="left">
               <InputIcon class="pi pi-lock"> </InputIcon>
-              <InputText class="h-9 w-full" v-model="password" type="password" toggleMask
+              <InputText class="h-9 w-full" v-model="password" type="password" toggleMask placeholder="***********"
                          @input="error=false" :invalid="error"/>
             </IconField>
             <Badge v-if="error" severity="danger">Неверные данные. Попробуйте снова!</Badge>

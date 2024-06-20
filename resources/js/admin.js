@@ -31,7 +31,7 @@ const router = new createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/admin/',
+            path: '/admin',
             component: ()=>import('./admin/pages/Home.vue'),
             name: 'admin.home',
         },
