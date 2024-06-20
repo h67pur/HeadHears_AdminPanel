@@ -98,7 +98,7 @@ function login() {
             </div>
             <div class="flex flex-col">
               <label for="username" class="text-sm">Дата рождения</label>
-              <InputText class="h-9 w-full"  v-model="nickname" placeholder="11.09.2001" @input="error=false" :invalid="error"/>
+              <InputText class="h-9 w-full"  v-model="nickname" placeholder="11.09.2002" @input="error=false" :invalid="error"/>
             </div>
             <div class="flex flex-col col-span-2">
               <label for="username" class="text-sm">ФИО</label>

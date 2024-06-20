@@ -15,6 +15,7 @@ const visibleCart = ref(false);
 
 import {onMounted, ref} from "vue";
 import axios from "axios";
+import router from "../router/router.js";
 
 const catalog = ref();
 const stores = ref();
@@ -118,7 +119,7 @@ function userFun()
     visibleRight.value = true;
   }
   else {
-    window.location.href='/login'
+    router.push('/login');
   }
 }
 </script>
